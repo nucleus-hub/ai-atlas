@@ -10,7 +10,7 @@ Hands-on Python fundamentals — the foundation for everything else in this repo
 | 02 | `02_python_collections_demo.py` | Lists, tuples, sets, dicts |
 | 03 | `03_python_functions_demo.py` | Functions, arguments, return values |
 | 04 | `04_python_strings_demo.py` | String methods & formatting |
-| 05 | `05_python_files_demo.py` | File reading/writing (uses `data/sample.txt`) |
+| 05 | `05_python_files_demo.py` | File reading/writing (generates `learning_notes.txt`) |
 | 06 | `06_python_exceptions_demo.py` | Error handling with try/except |
 | 07 | `07_python_oop_demo.py` | Classes, inheritance, encapsulation |
 | 08 | `08_python_api_demo.py` | Calling REST APIs |
@@ -24,8 +24,7 @@ Hands-on Python fundamentals — the foundation for everything else in this repo
 
 ## Notes
 
-- `data/sample.txt` — sample text file used by the file-I/O demo.
-- Runtime logs (e.g. `automated_system_logs.log`) are generated locally and **git-ignored** — they are not versioned.
+- Generated artifacts (`learning_notes.txt` from demo 05, `automated_system_logs.log` from demo 15) are created locally at runtime and **git-ignored** — they are not versioned.
 
 ## Run
 

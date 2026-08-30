@@ -20,6 +20,8 @@ venv/
 # --- Generated logs & artifacts ---
 *.log
 automated_system_logs.log
+# Output of python_basics/05_python_files_demo.py
+learning_notes.txt
 
 # --- ML model weights / caches (can be huge) ---
 models/
