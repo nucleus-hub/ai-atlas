@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-MODEL = "gemini-3.6-flash"  # small, fast, inexpensive — right for learning  # small, fast, inexpensive — right for learning
+MODEL = "gemini-2.0-flash"  # small, fast, inexpensive — right for learning
 SYSTEM = "You are a concise, helpful assistant. Keep answers short."
 
 def main() -> None:

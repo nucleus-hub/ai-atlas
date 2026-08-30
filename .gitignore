@@ -1,7 +1,29 @@
+# --- OS / editor cruft ---
 .DS_Store
 .idea/
 *.iml
+.vscode/
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 .venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Secrets & local env ---
 .env
+.env.*
+!.env.example
+
+# --- Generated logs & artifacts ---
+*.log
+automated_system_logs.log
+
+# --- ML model weights / caches (can be huge) ---
+models/
+.cache/
+*.pt
+*.ckpt
+*.safetensors
