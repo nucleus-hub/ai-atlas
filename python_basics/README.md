@@ -31,3 +31,26 @@ Hands-on Python fundamentals — the foundation for everything else in this repo
 ```bash
 python python_basics/01_python_basics_demo.py
 ```
+
+## Bonus: `probability_oop_app` (zipped in `resources/`)
+
+A small runnable OOP application from the course that ties together several
+basics topics — classes, config loading (env / JSON / YAML), and logging — while
+computing Binomial & Poisson probabilities. Kept zipped to stay lightweight.
+
+```bash
+cd python_basics/resources
+unzip probability_oop_app.zip && cd probability_oop_app
+pip install -r requirements.txt        # python-dotenv, PyYAML
+cp config/.env.example config/.env     # non-sensitive tunables (or use json/yaml)
+python app.py json                      # or: env | yaml
+```
+
+## Course materials (`resources/`)
+
+Static reference material from the AI Foundation Course:
+
+- `Python_Development_Best_Practices_Guide.pdf`
+- `Binomial_and_Poisson.html` — interactive lab (probability)
+- `Matrix_Lab.html` — interactive lab (linear algebra)
+- `probability_oop_app.zip` — runnable OOP + config + logging example (see above)

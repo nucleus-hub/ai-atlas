@@ -34,3 +34,14 @@ python ai_environment_setup/llm/local/chat_local.py
 Both chat loops support `/reset` and `/quit`.
 
 See `tools/README.md` and `llm/README.md` for details.
+
+## Course materials (`resources/`)
+
+Static setup guides from the AI Foundation Course:
+
+- `AI_Engineering_Environment_Setup.pdf` — main setup guide
+- `Preflight_Checklist.pdf` — pre-setup checklist
+- `Quick_Card.pdf` — quick reference card
+- `QnA.pdf` — common questions & answers
+- `RAM_vs_VRAM.pptx` — memory concepts
+- `Setup_Apple_Silicon.pdf` / `Setup_Ubuntu.pdf` / `Setup_Windows.pdf` — per-OS setup
