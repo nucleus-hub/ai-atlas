@@ -37,8 +37,7 @@ ai-atlas/
 │
 ├── python_basics/            <- Python learning (01-15 demos) + sample data
 ├── math_foundations/         <- math notes & examples (to be built up)
-├── llm/                      <- cloud/ (Gemini API) + local/ (on-device inference)
-└── tools/                    <- dev utilities (e.g. env key checker)
+└── ai_environment_setup/     <- LLM clients (cloud/local) + env/key tools
 ```
 
 **Planned sections** (added when I get there): `machine_learning/`, `deep_learning/`,
@@ -52,8 +51,7 @@ ai-atlas/
 |---------|-----------------|
 | **python_basics** | 15 hands-on demo scripts: basics, collections, functions, strings, files, exceptions, OOP, APIs, comprehensions, modules/lambdas, threading, sync, async, env config, logging. |
 | **math_foundations** | Notes and worked examples for linear algebra, probability, statistics, and calculus — the math ML is built on. |
-| **llm** | Chatting with LLMs: `cloud/` (Gemini API) and `local/` (Qwen via transformers). |
-| **tools** | Small dev utilities (e.g. `check_keys.py`). |
+| **ai_environment_setup** | LLM chat clients (`llm/cloud/` Gemini, `llm/local/` Qwen) plus environment/key utilities (`tools/check_keys.py`). |
 
 ---
 
@@ -78,7 +76,7 @@ ai-atlas/
 |---------|:------:|-------|
 | python_basics | In progress | 15 demos complete |
 | math_foundations | Not started | folder ready |
-| llm | Started | cloud + local chat loops working |
+| ai_environment_setup | Started | cloud + local chat loops working |
 | machine_learning | Planned | |
 | deep_learning | Planned | |
 | generative_ai | Planned | |
@@ -98,7 +96,7 @@ pip install -r requirements.txt
 
 # 3. Set up secrets (never commit the real .env!)
 cp .env.example .env             # then fill in your API keys
-python tools/check_keys.py       # verify keys are loaded
+python ai_environment_setup/tools/check_keys.py   # verify keys are loaded
 
 # 4. Run a Python basics demo
 python python_basics/01_python_basics_demo.py

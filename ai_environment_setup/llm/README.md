@@ -12,8 +12,8 @@ Working with Large Language Models — both hosted APIs and local inference.
 ## Setup
 
 ```bash
-cp ../.env.example ../.env     # add GOOGLE_API_KEY, HF_TOKEN, etc.
-python ../tools/check_keys.py  # verify keys load
+cp ../../.env.example ../../.env   # add GOOGLE_API_KEY, HF_TOKEN, etc.
+python ../tools/check_keys.py       # verify keys load
 
 # Cloud (Gemini)
 python cloud/chat_gemini.py
@@ -28,4 +28,3 @@ Both loops support `/reset` (clear conversation) and `/quit`.
 - [ ] Add an OpenAI-based cloud client
 - [ ] RAG over local documents
 - [ ] Function/tool calling
-- [ ] Prompt-engineering experiments (link into `../experiments/`)
