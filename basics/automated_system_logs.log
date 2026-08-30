@@ -1,0 +1,50 @@
+2026-08-30 17:13:26,579 [INFO] (Line: 25) - System initializing production pipeline operations...
+2026-08-30 17:13:26,580 [WARNING] (Line: 29) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:13:26,580 [ERROR] (Line: 36) - Data conversion failed: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 32, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:13:26,586 [INFO] (Line: 38) - Pipeline lifecycle completed cleanly.
+2026-08-30 17:13:37,822 [INFO] (Line: 25) - System initializing production pipeline operations...
+2026-08-30 17:13:37,823 [WARNING] (Line: 29) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:13:37,823 [ERROR] (Line: 36) - Data conversion failed: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 32, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:13:37,825 [INFO] (Line: 38) - Pipeline lifecycle completed cleanly.
+2026-08-30 17:13:50,553 [INFO] (Line: 25) - System initializing production pipeline operations...
+2026-08-30 17:13:50,553 [WARNING] (Line: 29) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:13:50,553 [ERROR] (Line: 36) - Data conversion failed: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 32, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:13:50,557 [INFO] (Line: 38) - Pipeline lifecycle completed cleanly.
+2026-08-30 17:19:23,878 [INFO] (Line: 25) - System initializing production pipeline operations...
+2026-08-30 17:19:23,878 [WARNING] (Line: 29) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:19:23,878 [ERROR] (Line: 36) - Data conversion failed: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 32, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:19:23,880 [INFO] (Line: 38) - Pipeline lifecycle completed cleanly.
+2026-08-30 17:25:18,397 [INFO] (Line: 25) - System initializing production pipeline operations...
+2026-08-30 17:25:18,397 [WARNING] (Line: 29) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:25:18,397 [ERROR] (Line: 36) - Conversion failed with traceback: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 32, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:25:18,399 [ERROR] (Line: 39) - Handled conversion failure; using no value: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:25:18,399 [INFO] (Line: 41) - Pipeline lifecycle completed cleanly.
+2026-08-30 17:30:18,992 [INFO] (Line: 46) - System initializing production pipeline operations...
+2026-08-30 17:30:18,993 [WARNING] (Line: 50) - Validating potentially unstable data: 'not_a_number'
+2026-08-30 17:30:18,993 [ERROR] (Line: 57) - Conversion failed with traceback: invalid literal for int() with base 10: 'not_a_number'
+Traceback (most recent call last):
+  File "/Users/k0s062z/Downloads/IIT_KGP_AI_Course/Projects/llm-starter/basics/15_python_logging.py", line 53, in run_production_simulation
+    int(user_input)
+ValueError: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:30:18,996 [ERROR] (Line: 60) - Handled conversion failure; using no value: invalid literal for int() with base 10: 'not_a_number'
+2026-08-30 17:30:18,996 [INFO] (Line: 62) - Pipeline lifecycle completed cleanly.
