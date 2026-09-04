@@ -3,6 +3,8 @@
 .idea/
 *.iml
 .vscode/
+# MS Office temp/lock files
+~$*
 
 # --- Python ---
 __pycache__/
