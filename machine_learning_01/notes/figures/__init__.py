@@ -3,7 +3,12 @@
 Importing this package registers every topic's figures in ``core.REGISTRY``.
 """
 
-from . import topic_01_foundations, topic_02_data_prep, topic_03_metrics  # noqa: F401
+from . import (  # noqa: F401
+    topic_01_foundations,
+    topic_02_data_prep,
+    topic_03_metrics,
+    topic_04_linear_regression,
+)
 from .core import REGISTRY, render
 
 __all__ = ["REGISTRY", "render"]
