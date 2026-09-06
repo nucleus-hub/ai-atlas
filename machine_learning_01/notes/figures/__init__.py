@@ -8,6 +8,7 @@ from . import (  # noqa: F401
     topic_02_data_prep,
     topic_03_metrics,
     topic_04_linear_regression,
+    topic_05_logistic_regression,
 )
 from .core import REGISTRY, render
 
