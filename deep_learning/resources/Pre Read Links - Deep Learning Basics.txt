@@ -1,0 +1,3 @@
+ANN: https://uc-r.github.io/ann_fundamentals#art
+CNN: https://poloclub.github.io/cnn-explainer/
+RNN & LSTM: https://cs231n.github.io/rnn/
