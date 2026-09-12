@@ -6,6 +6,7 @@ Importing this package registers every topic's figures in ``core.REGISTRY``.
 from . import (  # noqa: F401
     topic_01_decision_trees,
     topic_02_random_forest,
+    topic_03_clustering,
 )
 from .core import REGISTRY, render
 
