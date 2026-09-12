@@ -9,6 +9,7 @@ from . import (  # noqa: F401
     topic_03_clustering,
     topic_04_cluster_metrics,
     topic_05_feature_engineering,
+    topic_06_bias_variance,
 )
 from .core import REGISTRY, render
 
