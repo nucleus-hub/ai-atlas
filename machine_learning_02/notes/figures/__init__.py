@@ -8,6 +8,7 @@ from . import (  # noqa: F401
     topic_02_random_forest,
     topic_03_clustering,
     topic_04_cluster_metrics,
+    topic_05_feature_engineering,
 )
 from .core import REGISTRY, render
 
