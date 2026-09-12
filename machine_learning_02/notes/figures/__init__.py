@@ -7,6 +7,7 @@ from . import (  # noqa: F401
     topic_01_decision_trees,
     topic_02_random_forest,
     topic_03_clustering,
+    topic_04_cluster_metrics,
 )
 from .core import REGISTRY, render
 
