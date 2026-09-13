@@ -7,6 +7,7 @@ from . import (  # noqa: F401
     topic_01_intro_neuron,
     topic_02_ann_forward_prop,
     topic_03_activations_losses,
+    topic_04_backprop_gradient_descent,
 )
 from .core import REGISTRY, render
 
