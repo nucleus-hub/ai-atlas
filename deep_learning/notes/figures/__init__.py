@@ -9,6 +9,7 @@ from . import (  # noqa: F401
     topic_03_activations_losses,
     topic_04_backprop_gradient_descent,
     topic_05_optimizers,
+    topic_06_regularization,
 )
 from .core import REGISTRY, render
 
