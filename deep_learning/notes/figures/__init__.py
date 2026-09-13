@@ -11,6 +11,7 @@ from . import (  # noqa: F401
     topic_05_optimizers,
     topic_06_regularization,
     topic_07_cnn,
+    topic_08_rnn_lstm,
 )
 from .core import REGISTRY, render
 
