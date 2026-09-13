@@ -10,6 +10,7 @@ from . import (  # noqa: F401
     topic_04_backprop_gradient_descent,
     topic_05_optimizers,
     topic_06_regularization,
+    topic_07_cnn,
 )
 from .core import REGISTRY, render
 
