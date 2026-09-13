@@ -12,6 +12,7 @@ from . import (  # noqa: F401
     topic_06_regularization,
     topic_07_cnn,
     topic_08_rnn_lstm,
+    topic_09_architecture_choice,
 )
 from .core import REGISTRY, render
 
