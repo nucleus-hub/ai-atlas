@@ -33,3 +33,6 @@ models/
 *.pt
 *.ckpt
 *.safetensors
+
+# --- Unzipped course resource scratch dirs ---
+**/resources/extracted/
