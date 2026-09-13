@@ -67,7 +67,7 @@ dark dark | light light
 ```
 
 That edge could appear anywhere. An ANN must learn a separate “vertical edge at position X”
-detector for every location. A CNN learns **one filter**, slides it everywhere, and reuses it.
+detector for every location. A CNN learns **one filter**, moves it everywhere, and reuses it.
 
 ### 1.5 How it works
 
@@ -98,7 +98,7 @@ natural model for MNIST-like image classification.
 
 ### 2.1 Overview / What is it?
 
-A **filter** (also called a **kernel**) slides across the input. At every location it multiplies
+A **filter** (also called a **kernel**) moves across the input. At every location it multiplies
 matching cells, adds the results, and writes one number into a **feature map**.
 
 ![A 3×3 filter sliding over a 5×5 input to produce a 3×3 feature map](assets/cnn_convolution_operation.png)
@@ -180,7 +180,7 @@ map, so the output has 32 channels.
 
 ### 2.7 Key Takeaways
 
-> - A filter/kernel slides across an image, computes a dot product at each location, and produces
+> - A filter/kernel moves across an image, computes a dot product at each location, and produces
 >   a **feature map**.
 > - Filters are learned, not hand-written.
 > - **Parameter sharing** means one filter detects its pattern anywhere in the image.
