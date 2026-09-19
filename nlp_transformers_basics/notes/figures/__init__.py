@@ -11,6 +11,7 @@ from . import (  # noqa: F401
     topic_05_demo1_walkthrough,
     topic_06_embeddings,
     topic_07_self_attention,
+    topic_08_transformer_architecture,
 )
 from .core import REGISTRY, render
 
