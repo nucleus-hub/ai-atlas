@@ -431,4 +431,4 @@ translation, zero-shot classification, and Vision Transformers.
 
 ---
 
-> **Navigation:** ← Previous: [08 — Transformer Architecture](08_NLP_Transformers_Architecture.md) · Next → 10 — Demo 2: Transformer Applications
+> **Navigation:** ← Previous: [08 — Transformer Architecture](08_NLP_Transformers_Architecture.md) · Next → [10 — Demo 2: Transformer Applications](10_NLP_Demo2_Transformer_Applications.md)

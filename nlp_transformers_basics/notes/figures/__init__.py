@@ -13,6 +13,7 @@ from . import (  # noqa: F401
     topic_07_self_attention,
     topic_08_transformer_architecture,
     topic_09_variants_model_choice,
+    topic_10_demo2_applications,
 )
 from .core import REGISTRY, render
 
