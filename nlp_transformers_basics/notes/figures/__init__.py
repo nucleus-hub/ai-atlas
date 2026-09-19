@@ -8,6 +8,7 @@ from . import (  # noqa: F401
     topic_02_language_levels,
     topic_03_preprocessing,
     topic_04_text_representation,
+    topic_05_demo1_walkthrough,
 )
 from .core import REGISTRY, render
 
