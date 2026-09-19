@@ -9,6 +9,7 @@ from . import (  # noqa: F401
     topic_03_preprocessing,
     topic_04_text_representation,
     topic_05_demo1_walkthrough,
+    topic_06_embeddings,
 )
 from .core import REGISTRY, render
 
