@@ -40,6 +40,10 @@ ai-atlas/
 └── ai_environment_setup/     <- LLM clients (cloud/local) + env/key tools
 ```
 
+> **Note:** these three sections, plus `data_engineering/`, `machine_learning_01/`,
+> `machine_learning_02/`, `deep_learning/` and `nlp_transformers_basics/`, now live
+> under `foundation_course/` with numeric prefixes (e.g. `foundation_course/03_python_basics/`).
+
 **Planned sections** (added when I get there): `machine_learning/`, `deep_learning/`,
 `generative_ai/`, `ai_concepts/`, `experiments/`, `notes/`, `projects/`.
 
@@ -96,10 +100,10 @@ pip install -r requirements.txt
 
 # 3. Set up secrets (never commit the real .env!)
 cp .env.example .env             # then fill in your API keys
-python ai_environment_setup/tools/check_keys.py   # verify keys are loaded
+python foundation_course/01_ai_environment_setup/tools/check_keys.py   # verify keys are loaded
 
 # 4. Run a Python basics demo
-python python_basics/01_python_basics_demo.py
+python foundation_course/03_python_basics/01_python_basics_demo.py
 ```
 
 ---
