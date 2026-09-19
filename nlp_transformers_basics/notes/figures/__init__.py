@@ -10,6 +10,7 @@ from . import (  # noqa: F401
     topic_04_text_representation,
     topic_05_demo1_walkthrough,
     topic_06_embeddings,
+    topic_07_self_attention,
 )
 from .core import REGISTRY, render
 
