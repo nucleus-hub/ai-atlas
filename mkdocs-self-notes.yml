@@ -1,0 +1,60 @@
+site_name: AI Atlas — Self Notes
+site_description: Visual self-study notes for the IIT KGP Generative & Agentic AI course
+docs_dir: 00_self_notes
+site_dir: site/self-notes
+exclude_docs: |
+  _support/tools/
+# Plain .html links so the built site also opens straight from disk (file://).
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  # Colours come from _support/stylesheets/theme.css (WCAG 2.2 AA checked).
+  # Google Fonts is blocked on the corporate network; theme.css uses system fonts.
+  font: false
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  # navigation.instant is omitted on purpose: it breaks file:// browsing.
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - Home: README.md
+  - Topic 5 — LLM Models & APIs: Topic5_LLM_Models_APIs_Self_Notes.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - _support/stylesheets/layout.css
+  - _support/stylesheets/theme.css
+
+extra_javascript:
+  - _support/javascripts/toc-toggle.js

@@ -1,0 +1,129 @@
+/* Page structure only: widths, sidebars, drawer. Colours and type live in theme.css. */
+:root {
+  --atlas-drawer-width: 12.1rem; /* Material's sidebar width */
+  --atlas-page-width: 80rem;     /* Material default: 61rem */
+  --atlas-header-height: 2.4rem; /* Material's header; the TOC sticks below it */
+  --atlas-toc-rail-width: 1rem;  /* what is left of the TOC when collapsed */
+  --atlas-toc-toggle-size: 1.5rem;
+}
+
+/* ------------------------------------------------------------------
+   Reading layout (desktop): page TOC on the LEFT, site navigation in
+   the slide-out drawer behind the header's menu button, and content
+   using the freed-up width. Mirrors the drawer Material already uses
+   below its 76.25em breakpoint.
+   ------------------------------------------------------------------ */
+.md-grid {
+  max-width: var(--atlas-page-width);
+}
+
+/* Material pushes the TOC right with order: 2; the DOM already places it
+   before the content, so resetting the order moves it left. */
+.md-sidebar--secondary {
+  order: 0;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header__button[for="__drawer"] {
+    display: inline-block;
+  }
+
+  .md-sidebar--primary {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--atlas-drawer-width));
+    z-index: 5;
+    width: var(--atlas-drawer-width);
+    height: 100%;
+    padding-top: 1rem;
+    background-color: var(--md-default-bg-color);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    overflow-y: auto;
+  }
+
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(var(--atlas-drawer-width));
+    box-shadow: var(--md-shadow-z3);
+  }
+
+  /* Dimmed backdrop; clicking it closes the drawer. */
+  .md-overlay {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: #0000008a;
+    transition: width 0ms 0.25s, height 0ms 0.25s, opacity 0.25s;
+  }
+
+  [data-md-toggle="drawer"]:checked ~ .md-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: width 0ms, height 0ms, opacity 0.25s;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Collapsible left TOC. toc-toggle.js adds the button and sets
+   html[data-atlas-toc="collapsed"]; the TOC only shows from 60em up.
+   ------------------------------------------------------------------ */
+.atlas-toc-toggle {
+  display: none;
+}
+
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary {
+    transition: width 0.25s ease;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    transition: opacity 0.2s ease, visibility 0.2s;
+  }
+
+  [data-atlas-toc="collapsed"] .md-sidebar--secondary {
+    width: var(--atlas-toc-rail-width);
+  }
+
+  /* visibility (not just opacity) also removes the links from tab order. */
+  [data-atlas-toc="collapsed"] .md-sidebar--secondary .md-sidebar__scrollwrap {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* Centre on the visible TOC panel: the sidebar's 1.2rem top padding plus
+     half the panel height, which toc-toggle.js mirrors from Material (it
+     changes as the page scrolls). The fallback assumes a stuck sidebar. */
+  .atlas-toc-toggle {
+    position: absolute;
+    top: calc(
+      1.2rem +
+      (var(--atlas-toc-panel-height, calc(100vh - 2 * var(--atlas-header-height)))
+        - var(--atlas-toc-toggle-size)) / 2
+    );
+    right: -0.55rem; /* straddles the TOC divider line */
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: var(--atlas-toc-toggle-size);
+    height: var(--atlas-toc-toggle-size);
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-sidebar--secondary,
+  .md-sidebar--secondary .md-sidebar__scrollwrap,
+  .atlas-toc-toggle svg {
+    transition: none;
+  }
+}

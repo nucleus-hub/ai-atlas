@@ -36,3 +36,6 @@ models/
 
 # --- Unzipped course resource scratch dirs ---
 **/resources/extracted/
+
+# --- MkDocs build output ---
+site/
