@@ -660,19 +660,22 @@ These three problems increase in difficulty. Try each one on paper before openin
 
 ---
 
-## 12. Checklist
+## 12. Key takeaways
 
-```text
-[ ] EXPLAIN an LLM as next-token prediction over tokens inside a context window
-[ ] DISTINGUISH training (weights change) from inference and prompting (weights fixed)
-[ ] WRITE prompts with role, task, context, constraints, and output format as needed
-[ ] CHOOSE zero-shot or few-shot, and use XML tags when a prompt mixes data and instructions
-[ ] CALL OpenAI (responses.create -> output_text) and Claude (messages.create -> content[0].text)
-[ ] KEEP API keys in environment variables, and confirm current model IDs in the docs
-[ ] RUN a Hugging Face pipeline, and read the model card before adopting a model
-[ ] PICK RAG for knowledge, fine-tuning for behavior, prompting for delivery
-[ ] VERIFY outputs: test code, check claims, and evaluate prompts on real examples
-```
+Each row condenses one part of this page into the idea worth remembering. Follow the section number whenever you need the details again.
+
+| Topic | Key takeaway | Where it is covered |
+|---|---|---|
+| How an LLM works | An LLM generates text by predicting the next token from patterns learned in training. It does not look facts up, so fluent output can still be wrong. | Section 1 |
+| Core concepts | Text becomes tokens and numeric IDs, the context window limits how much the model can see at once, and temperature trades consistency for variety. | Section 2 |
+| Training vs inference | Training changes the model's weights and is done once by the provider. Inference and prompting use those fixed weights on every request. | Sections 2 and 3 |
+| Prompt engineering | Start with a clear task, then add role, context, constraints, and output format only as needed. Few-shot examples show the model what instructions alone cannot describe. | Section 4 |
+| OpenAI API | `client.responses.create(model, instructions, input)` returns the answer in `response.output_text`. The key lives in `OPENAI_API_KEY`, and usage is billed per token, separately from ChatGPT. | Section 5 |
+| Anthropic API | `client.messages.create(model, max_tokens, system, messages)` returns the answer in `message.content[0].text`, and `max_tokens` is required. Only the SDK layer differs from OpenAI; the prompting concepts are identical. | Section 6 |
+| Prompting Claude | Prompting skills transfer across providers. XML tags, clearly separated documents, self-checks, and staged tasks help most when prompts become complex. | Section 7 |
+| Hugging Face | Hugging Face is an open ecosystem of models from many publishers that you can often run yourself. Read the model card for the license, limitations, and hardware needs before adopting a model. | Section 8 |
+| RAG vs fine-tuning | Use RAG to give the model knowledge, fine-tuning to change its behavior, and prompt engineering to change how it delivers answers. | Section 9 |
+| Working safely | Keep API keys out of source code, confirm current model IDs in the provider's docs, and verify outputs with tests and reliable sources. | Sections 5 and 10 |
 
 !!! tip "Practice project"
     Combine everything into a small Python **document Q&A assistant**: embed a handful of your own notes, retrieve the most relevant ones for a question, and send them to an LLM API with a prompt that asks for a grounded, cited answer.
