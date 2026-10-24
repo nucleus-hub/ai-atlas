@@ -67,7 +67,7 @@ These terms appear in every LLM tutorial, API reference, and model card. They ar
 | Concept | Simple explanation | Example |
 |---|---|---|
 | **Token** | A small piece of text the model processes: a whole word, part of a word, or punctuation. | GPT-2's tokenizer splits `"Learning AI"` into `Learning` and ` AI` (the space belongs to the second token). |
-| **Tokenization** | Converting text into tokens and then into numeric token IDs. | `"I love AI"` → tokens → IDs. |
+| **Tokenization** | Converting text into tokens and then into numeric token IDs. | GPT-2: `"I love AI"` → `I`, ` love`, ` AI` → `[40, 1842, 9552]`. |
 | **Embedding** | A vector of numbers representing a token (or a whole text) so that related meanings end up close together. | `king` and `queen` have related embeddings. |
 | **Context window** | The maximum number of tokens (prompt + conversation + answer) the model can consider at once. | In a very long chat, early messages must be dropped or summarized. |
 
@@ -499,7 +499,7 @@ classifier = pipeline(
 )
 
 print(classifier("The application is easy to use and works perfectly!"))
-# [{'label': 'POSITIVE', 'score': 0.9998}]
+# [{'label': 'POSITIVE', 'score': 0.9998}]   <- illustrative; the exact score varies slightly
 ```
 
 | Code | Explanation |
