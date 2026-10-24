@@ -66,35 +66,35 @@ These terms appear in every LLM tutorial, API reference, and model card. They ar
 
 | Concept | Simple explanation | Example |
 |---|---|---|
-| **Token** | A small piece of text the model processes: a whole word, part of a word, or punctuation. | GPT-2's tokenizer splits `"Learning AI"` into `Learning` and ` AI` (the space belongs to the second token). |
-| **Tokenization** | Converting text into tokens and then into numeric token IDs. | GPT-2: `"I love AI"` → `I`, ` love`, ` AI` → `[40, 1842, 9552]`. |
-| **Embedding** | A vector of numbers representing a token (or a whole text) so that related meanings end up close together. | `king` and `queen` have related embeddings. |
-| **Context window** | The maximum number of tokens (prompt + conversation + answer) the model can consider at once. | In a very long chat, early messages must be dropped or summarized. |
+| **Token** | A token is the basic unit of text an LLM reads and writes. It can be a whole word, part of a word, or a punctuation mark. | GPT-2's tokenizer splits `"Learning AI"` into two tokens, `Learning` and ` AI`, with the space attached to the second token. |
+| **Tokenization** | Tokenization is the step that splits text into tokens and maps each token to a numeric ID. The model only ever sees these IDs, never the raw text. | GPT-2 turns `"I love AI"` into the tokens `I`, ` love`, ` AI` and then into the IDs `[40, 1842, 9552]`. |
+| **Embedding** | An embedding is a list of numbers (a vector) that represents a token or a piece of text. Texts with similar meanings get vectors that are close together. | The embeddings for `king` and `queen` sit closer to each other than either does to `banana`. |
+| **Context window** | The context window is the maximum number of tokens the model can consider in one request. It covers the prompt, the earlier conversation, and the answer being generated. | When a chat grows longer than the context window, the oldest messages must be dropped or summarized. |
 
 ### How the model is built
 
 | Concept | Simple explanation | Example |
 |---|---|---|
-| **Parameters (weights)** | The numbers learned during training that determine the model's behavior. | A "70B" model has about 70 billion of them. More is not automatically better. |
-| **Training** | Adjusting the parameters so the model's predictions get better on data. | Repeatedly predicting the next token and correcting mistakes. |
-| **Pretraining** | The first, largest training stage on broad data, which teaches general patterns. | Learning grammar, facts, and coding patterns. |
-| **Fine-tuning** | Further training of a pretrained model on selected examples for a specific behavior or task. | Training on support conversations to improve support replies. |
-| **Transformer** | The neural network architecture behind most modern LLMs, built around attention. | GPT, Claude, Llama, and BERT are all Transformer-based. |
-| **Attention** | The mechanism that lets each token weigh how relevant every other token is. | In "The cat sat on the mat because it was tired", attention links `it` to `cat`. |
+| **Parameters (weights)** | Parameters are the numbers the model learns during training, and together they decide how it responds. They are what you download when you "download a model". | A "70B" model has about 70 billion parameters. A larger model is often more capable, but not automatically better for every task. |
+| **Training** | Training is the process of adjusting the parameters so that the model's predictions become more accurate. It needs large amounts of data and compute. | The model repeatedly predicts the next token in real text, and its parameters are nudged whenever the prediction is wrong. |
+| **Pretraining** | Pretraining is the first and largest training stage, run on broad data such as web text, books, and code. It teaches the model general patterns of language and knowledge. | After pretraining, a model knows grammar, many facts, and common coding patterns, but it does not yet follow instructions well. |
+| **Fine-tuning** | Fine-tuning is additional training of a pretrained model on a smaller, targeted set of examples. It adapts the model to a specific task or style of behavior. | Fine-tuning a model on past customer-support conversations makes its support replies more accurate and on-brand. |
+| **Transformer** | The Transformer is the neural network architecture behind most modern LLMs. Its key ingredient is attention, which lets it process all the tokens of the input together. | GPT, Claude, Llama, and BERT are all built on the Transformer architecture. |
+| **Attention** | Attention is the mechanism that lets each token weigh how relevant the other tokens in the context are to it. This is how the model connects related words, even when they are far apart. | In "The cat sat on the mat because it was tired", attention helps the model link `it` back to `cat`. |
 
 ### How you use the model
 
 | Concept | Simple explanation | Example |
 |---|---|---|
-| **Inference** | Running an already-trained model to get an answer. Weights do not change. | Asking an assistant to explain a Python function. |
-| **Next-token prediction** | Choosing a likely next token from the context, one token at a time. | `"The sun rises in the"` → `east`. |
-| **Temperature** | A sampling setting: lower values give more predictable output, higher values more variety. Not every model or API exposes it. | Low for code and extraction; higher for brainstorming. |
-| **System prompt** | Standing instructions that set the model's role, rules, and tone for a conversation. | "Act as a Python tutor. Use simple examples." |
-| **Multimodal model** | A model that accepts or produces more than text: images, audio, or video. | Upload a screenshot and ask what the error means. |
-| **Hallucination** | Output that sounds convincing but is wrong, unsupported, or invented. | Citing a paper or an API method that does not exist. |
+| **Inference** | Inference means running an already-trained model to get a response. The model's parameters stay fixed; it only applies what it learned. | Every time you ask an assistant to explain a Python function, the model is performing inference. |
+| **Next-token prediction** | Next-token prediction is how an LLM generates text: it picks a likely next token based on everything so far, appends it, and repeats. | Given `"The sun rises in the"`, the model assigns a high probability to `east` and is likely to choose it. |
+| **Temperature** | Temperature is a generation setting that controls how predictable or varied the output is. Lower values make answers more consistent; higher values make them more creative. Not every model or API exposes it. | Use a low temperature for code and data extraction, and a higher one for brainstorming ideas. |
+| **System prompt** | A system prompt is a set of standing instructions that defines the model's role, rules, and tone for a whole conversation. It applies to every user message that follows. | The system prompt "Act as a Python tutor and explain concepts with simple examples" shapes every answer in that chat. |
+| **Multimodal model** | A multimodal model can accept or produce more than text, such as images, audio, or video. | You can upload a screenshot of an error to a multimodal model and ask it what the error means. |
+| **Hallucination** | A hallucination is a response that sounds confident and convincing but is wrong, unsupported, or invented. It happens because the model predicts plausible text rather than looking facts up. | A model may cite a research paper or recommend an API method that does not exist. |
 
 !!! warning "Training, inference, and prompting are different things"
-    **Training** changes the model's weights. **Inference** uses the weights without changing them. **Prompt engineering** steers inference through the input alone, so it costs nothing to iterate and never alters the model.
+    **Training** changes the model's weights. **Inference** uses the weights without changing them. **Prompt engineering** steers inference through the input alone, so it is quick and cheap to iterate on and never alters the model.
 
 ---
 
