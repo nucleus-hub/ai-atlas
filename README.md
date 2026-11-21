@@ -42,7 +42,7 @@ ai-atlas/
 
 > **Note:** these three sections, plus `data_engineering/`, `machine_learning_01/`,
 > `machine_learning_02/`, `deep_learning/` and `nlp_transformers_basics/`, now live
-> under `foundation_course/` with numeric prefixes (e.g. `foundation_course/03_python_basics/`).
+> under `Upgrad_Foundation_Course` with numeric prefixes (e.g. `Upgrad_Foundation_Course`).
 
 **Planned sections** (added when I get there): `machine_learning/`, `deep_learning/`,
 `generative_ai/`, `ai_concepts/`, `experiments/`, `notes/`, `projects/`.
